@@ -46,7 +46,7 @@ df = pd.DataFrame({'A': np.random.randint(1, 100, 10000),
      df['C'] = df.apply(lambda row: row['A'] + row['B'], axis=1)
    ```
 
-5. Each function will be performed once, measuring the time taken to verify which was more optimal.
+4. Each function will be performed once, measuring the time taken to verify which was more optimal.
 ```python
 vectorized_time = timeit.timeit(vectorization, number=1)
 iterrows_time = timeit.timeit(iterrows, number=1)
@@ -60,4 +60,8 @@ print(f"Apply: {apply_time}s")
 Then, doing a test, the results were:
 
 ![Time needed for the three methods on 1 iteration](time_three_method_1.png)
-   
+
+However, considering that the load may become heavier and would need to be performed several times, each method was tested with 10 iterations. The results were:
+
+![Time needed for the three methods on 10 iteration](time_three_method_1.png)
+
