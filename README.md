@@ -124,3 +124,4 @@ print(f'Vectorization: {time_vect_large}s')
 ```
 
 For this comparison, the results in terms of time consumed were:
+![Complex comparation](test_apply_vect.png)
