@@ -66,3 +66,5 @@ However, considering that the load may become heavier and would need to be perfo
 ![Time needed for the three methods on 10 iteration](time_three_method_10.png)
 
 Imagine you have to do some operations with your dataframe that are much larger and over a long period of time, the time benefit of using vectorisation over other available options is brutal.
+
+While testing the different methods, the question arose as to whether vectorisation would still be superior if it is not just a simple row operation, but also a column operation?
