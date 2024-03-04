@@ -60,11 +60,11 @@ print(f"Apply: {apply_time}s")
 
 Then, doing a test, the results were:
 
-![Time needed for the three methods on 1 iteration](time_three_method_1.png)
+![Time needed for the three methods on 1 iteration](time_three_method.png)
 
 However, considering that the load may become heavier and would need to be performed several times, each method was tested with 10 iterations. The results were:
 
-![Time needed for the three methods on 10 iteration](time_three_method_10.png)
+![Time needed for the three methods on 10 iteration](time_three_method2.png)
 
 Imagine you have to do some operations with your dataframe that are much larger and over a long period of time, the time benefit of using vectorisation over other available options is brutal.
 
