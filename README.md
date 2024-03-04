@@ -51,9 +51,12 @@ df = pd.DataFrame({'A': np.random.randint(1, 100, 10000),
 vectorized_time = timeit.timeit(vectorization, number=1)
 iterrows_time = timeit.timeit(iterrows, number=1)
 apply_time = timeit.timeit(apply, number=1)
-  
-print(f"Vectorized Time: {vectorized_time}")
-print(f"iterrows Time: {iterrows_time}")
-print(f"apply Time: {apply_time}")
-```   
+
+print(f"Vectorization: {vectorized_time}s")
+print(f"Iterrows: {iterrows_time}s")
+print(f"Apply: {apply_time}s")
+```
+
+Then, doing a test, the results were:
+
    
