@@ -13,7 +13,7 @@
 
 Since efficiency on very large data is crucial, I have made a brief comparison at the code level to see how it could be more optimal. For my test, I decided to create a DataFrame of a considerable size (10000 rows), and performed a sum between the two columns (which have the same size). In this way, I will be able to check which method is the most suitable by measuring the time it takes each one to perform this operation 1 time. Let's go into the code in more detail:
 
-'''python
+```python
 import pandas
 Hola
-'''
+```
