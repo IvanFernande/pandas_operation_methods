@@ -122,3 +122,5 @@ time_vect_large = timeit.timeit(vectorized_function_large, number=1)
 print(f'Apply: {time_apply_large}s')
 print(f'Vectorization: {time_vect_large}s')
 ```
+
+For this comparison, the results in terms of time consumed were:
