@@ -127,3 +127,5 @@ For this comparison, the results in terms of time consumed were:
 
 ![Complex comparation](test_apply_vect.png)
 
+# Conclusion
+To conclude, vectorisation is generally faster and more efficient in terms of performance, especially for simple and fast operations. However, apply() can be more flexible and useful for applying more complex functions that cannot be easily expressed as vectorised operations. In general, vectorisation is recommended whenever possible, but apply() can be a useful tool when vectorisation is not practical or sufficient.
