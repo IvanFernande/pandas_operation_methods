@@ -28,6 +28,7 @@ df = pd.DataFrame({'A': np.random.randint(1, 100, 10000),
 ```
 
 3. We will include the different methods to be tested, being the ones mentioned at the beginning.
+
    3.1. Vectorization
    ```python
    def vectorization():
@@ -45,7 +46,7 @@ df = pd.DataFrame({'A': np.random.randint(1, 100, 10000),
      df['C'] = df.apply(lambda row: row['A'] + row['B'], axis=1)
    ```
 
-4. Each function will be performed once, measuring the time taken to verify which was more optimal.
+5. Each function will be performed once, measuring the time taken to verify which was more optimal.
 ```python
 vectorized_time = timeit.timeit(vectorization, number=1)
 iterrows_time = timeit.timeit(iterrows, number=1)
