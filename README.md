@@ -46,13 +46,13 @@ df = pd.DataFrame({'A': np.random.randint(1, 100, 10000),
    ```
 
 4. Each function will be performed once, measuring the time taken to verify which was more optimal.
-   ```python
-   vectorized_time = timeit.timeit(vectorization, number=1)
-   iterrows_time = timeit.timeit(iterrows, number=1)
-   apply_time = timeit.timeit(apply, number=1)
-    
-   print(f"Vectorized Time: {vectorized_time}")
-   print(f"iterrows Time: {iterrows_time}")
-   print(f"apply Time: {apply_time}")
-   ```   
+```python
+vectorized_time = timeit.timeit(vectorization, number=1)
+iterrows_time = timeit.timeit(iterrows, number=1)
+apply_time = timeit.timeit(apply, number=1)
+  
+print(f"Vectorized Time: {vectorized_time}")
+print(f"iterrows Time: {iterrows_time}")
+print(f"apply Time: {apply_time}")
+```   
    
