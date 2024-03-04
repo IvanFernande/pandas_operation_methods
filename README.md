@@ -63,5 +63,5 @@ Then, doing a test, the results were:
 
 However, considering that the load may become heavier and would need to be performed several times, each method was tested with 10 iterations. The results were:
 
-![Time needed for the three methods on 10 iteration](time_three_method_1.png)
+![Time needed for the three methods on 10 iteration](time_three_method_10.png)
 
