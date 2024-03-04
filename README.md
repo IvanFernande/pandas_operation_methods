@@ -68,4 +68,57 @@ However, considering that the load may become heavier and would need to be perfo
 
 Imagine you have to do some operations with your dataframe that are much larger and over a long period of time, the time benefit of using vectorisation over other available options is brutal.
 
-While testing the different methods, the question arose as to whether vectorisation would still be superior if it is not just a simple row operation, but also a column operation?
+### Complex example
+Next, a large DataFrame is created, and a complex function is applied to it using both the apply() method and vectorized operations. The goal is to compare the performance of these two approaches. By streamlining the code and enhancing its efficiency, we aim to demonstrate the benefits of vectorization over traditional iterative methods in data manipulation tasks. Let's delve into the optimized script to explore these concepts further.
+
+1. First, the librarys.
+```python
+import pandas as pd
+import numpy as np
+import timeit
+```
+
+2. Then, the new DataFrame.
+```python
+np.random.seed(0)
+df_large = pd.DataFrame(np.random.randint(1, 100, size=(100000, 3)),
+columns=['A', 'B', 'C'])
+```
+
+3. The experiment for the apply function.
+```python
+def setup_large():
+
+    # Recreate the large DataFrame
+    df_large = pd.DataFrame(np.random.randint(1, 100, size=(100000, 3)),
+                            columns=['A', 'B', 'C'])
+
+    def complex_func(row):
+        if row['A'] > row['B']:
+            return row['A'] + row['C']
+        else:
+            return row['B'] - row['C']
+
+    return df_large, complex_func
+
+def apply_function_large():
+    df_large, complex_func = setup_large()
+    df_large['D_apply'] = df_large.apply(complex_func, axis=1)
+```
+
+4. The experiment for the vectorization.
+```python
+def vectorized_function_large():
+    df_large, _ = setup_large()
+    df_large['D_vect'] = np.where(df_large['A'] > df_large['B'],
+                                  df_large['A'] + df_large['C'], df_large['B'] - df_large['C'])
+```
+
+5. Finally, the time taken for each function.
+```python
+time_apply_large = timeit.timeit(apply_function_large, number=1)
+time_vect_large = timeit.timeit(vectorized_function_large, number=1)
+
+print(f'Apply: {time_apply_large}s')
+print(f'Vectorization: {time_vect_large}s')
+```
