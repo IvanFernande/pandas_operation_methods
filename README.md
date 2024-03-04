@@ -58,5 +58,6 @@ print(f"Apply: {apply_time}s")
 ```
 
 Then, doing a test, the results were:
+
 ![Time needed for the three methods on 1 iteration](time_three_method_1.png)
    
